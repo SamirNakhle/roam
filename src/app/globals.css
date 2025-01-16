@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .page-base {
+    @apply relative z-10 overflow-x-clip px-[25px] pt-[240px] sm:px-[45px] sm:pt-[150px] lg:px-[100px] lg:pt-[130px];
+  }
+}
+
+@layer utilities {
+  .purple-text {
+    @apply bg-purple-text bg-clip-text font-black text-transparent;
+  }
+}
+
+@layer components {
+  .embla {
+    --slide-spacing: 25px;
+    --slide-size: 160px;
+    /*--slide-size: 30%;*/
+  }
+
+  .embla__viewport {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+
+  .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+  }
+}
