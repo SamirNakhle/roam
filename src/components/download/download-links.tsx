@@ -84,7 +84,7 @@ const DownloadCard = ({
   icon,
   title,
   text,
-  // href,
+  href,
   index,
 }: DownloadCardProps) => {
   const Icon = icon === "apple" ? Apple : Android;
@@ -105,8 +105,8 @@ const DownloadCard = ({
       </p>
       <Link
         // target="_blank"
-        // href={href}
-        href={"#form-newsletter"}
+        href={href}
+        // href={"#form-newsletter"}
         className="flex h-11 w-fit items-center justify-center whitespace-nowrap rounded-lg bg-white px-[15px] text-lg font-semibold text-black transition-colors duration-300 hover:bg-[#D9D9D9] sm:h-[54px] sm:max-w-[243px] sm:px-[45px] sm:text-[22px] sm:leading-[47px]"
       >
         Download Now
